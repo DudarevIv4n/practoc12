@@ -1,0 +1,74 @@
+﻿<Window x:Class="Практическая_12.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Практическая_12"
+        mc:Ignorable="d"
+        Title="Практическая 12. Вариант 4." Height="349" Width="376" ResizeMode="NoResize">
+    <Grid>
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="Файл" Height="20">
+                <MenuItem Header="Выход" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="О программе" Click="GetInformation_Click"/>
+        </Menu>
+
+        <TabControl Margin="0,25,0,30">
+            <TabItem Header="Куб">
+                <Grid>
+                    <GroupBox Header="Исходные данные" Margin="0,0,179,0">
+                        <Grid>
+                            <TextBox x:Name="inputvalue" HorizontalAlignment="Left" Height="23" Margin="25,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="Inputvalue_TextChanged"/>
+                            <Label Content="Длина ребра куба:" HorizontalAlignment="Left" Margin="25,59,0,0" VerticalAlignment="Top" Width="120"/>
+
+                        </Grid>
+                    </GroupBox>
+
+                    <GroupBox Header="Результат"  Margin="190,0,0,0">
+                        <Grid>
+                            <TextBox x:Name="volumeresult" HorizontalAlignment="Left" Height="23" Margin="22,37,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+                            <TextBox x:Name="squareresult"  HorizontalAlignment="Left" Height="23" Margin="22,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+                            <Label Content="V куба:" HorizontalAlignment="Left" Margin="22,10,0,0" ToolTip="V - объем" VerticalAlignment="Top" Width="120"/>
+                            <Label Content="S поверхности куба:" HorizontalAlignment="Left" ToolTip="S - площадь" Margin="22,65,0,0" VerticalAlignment="Top" Width="120"/>
+                            <Button Content="Рассчитать" HorizontalAlignment="Left" Margin="22,136,0,0" VerticalAlignment="Top" Width="120" Click="GetCalculations_Click"/>
+
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+
+
+            </TabItem>
+
+            <TabItem Header="Конвертер">
+                <Grid>
+                    <GroupBox Header="Исходные данные" Margin="0,0,179,0">
+                        <Grid>
+                            <TextBox x:Name="kgvalue" HorizontalAlignment="Left" Height="23" Margin="25,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="Kgvalue_TextChanged"/>
+                            <Label Content="Масса в кг:" HorizontalAlignment="Left" Margin="25,59,0,0" VerticalAlignment="Top" Width="120"/>
+
+                        </Grid>
+                    </GroupBox>
+
+                    <GroupBox Header="Результат"  Margin="190,0,0,0">
+                        <Grid>
+                            <TextBox x:Name="tonsresult"  HorizontalAlignment="Left" Height="23" Margin="22,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+                            <Label Content="Масса в тоннах:" HorizontalAlignment="Left" Margin="22,65,0,0" VerticalAlignment="Top" Width="120"/>
+                            <Button Content="Рассчитать" HorizontalAlignment="Left" Margin="22,136,0,0" VerticalAlignment="Top" Width="120" Click="GetTon_Click"/>
+
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+
+            </TabItem>
+        </TabControl>
+        <StatusBar HorizontalAlignment="Left" Height="23" Margin="10,286,0,0" VerticalAlignment="Top" Width="350">
+            <TextBlock Text="Задание 12"/>
+            <Separator/>
+            <TextBlock x:Name="data" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="13"/>
+            <Separator/>
+            <TextBlock x:Name="time" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="13"/>
+       </StatusBar>
+
+    </Grid>
+</Window>
